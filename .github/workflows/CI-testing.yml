@@ -19,4 +19,4 @@ jobs:
           python-version: '3.13'
 
       - name: Run tests
-        run: python -m unittest main  # Adjust to the name of your test module
+        run: python -m unittest main
