@@ -19,4 +19,4 @@ jobs:
           python-version: '3.13'
 
       - name: Run tests
-        run: python -m unittest
+        run: python -m main
