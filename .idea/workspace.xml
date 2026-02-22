@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ddeddc5-aa67-40c5-ba5e-16e1d38557e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/CI-testing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/CI-testing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance_report.json" beforeDir="false" afterPath="$PROJECT_DIR$/attendance_report.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

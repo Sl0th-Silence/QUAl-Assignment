@@ -66,6 +66,8 @@ class Events:
         except:
             print("No attendees registered")
 
+# ================= TESTING =============== #
+
 event_1 = Events()
 
 event_1.create_new_event("Brunch", "2026-06-15")
@@ -107,6 +109,34 @@ class TestMain(unittest.TestCase):
 
     def test_ids_are_generated(self):
         self.assertNotEqual(event_1.event_id, "", msg="Id's are being generated")
+
+    #Create event, register guests, accept guests, check file
+    def test_create_event(self):
+        new_event = Events()
+        new_event.create_new_event("House Warming", "2026-06-18")
+        #Add people
+        new_event.register_attendee("Joey@F.com", "Joe")
+        new_event.register_attendee("F.Rank@Gmail.ca", "Frank")
+        new_event.register_attendee("Phi.lee@place.ca", "Phil")
+        #Check people in
+        new_event.check_in_attendee("Joey@F.com", "Joe")
+        new_event.generate_attendance_report()
+
+        #Make sure report not empty
+        self.assertNotEqual(new_event.output_JSON, [], msg="Report is not empty")
+        self.assertEqual(new_event.output_JSON[1], {'Email': 'Joey@F.com', 'Name': 'Joe'}, msg="Joe was added")
+
+    #Create event, save to file, open file and read data. Making sure it's saving to a JSON file properly
+    def test_read_json_file(self):
+        new_event2 = Events()
+        new_event2.create_new_event("House Warming", "2026-06-18")
+        new_event2.generate_attendance_report()
+        with open("attendance_report.json", "r") as JSON_file:
+            data = json.load(JSON_file)
+            self.assertEqual(data[0],{"Event Name": "House Warming"}, msg="Report is not empty")
+
+    def test_can_not_think_of_another_integration_test(self):
+        self.assertNotEqual("Jays Brain", "Smart", "I can think, no more.")
 
 if __name__ == '__main__':
     unittest.main()

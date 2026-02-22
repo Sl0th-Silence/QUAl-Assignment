@@ -1,19 +1,11 @@
 [
     {
-        "Event Name": "Brunch"
+        "Event Name": "House Warming"
     },
     {
-        "Email": "Fred@Gmail.com",
-        "Name": "Freddy"
+        "Registered:": 0
     },
     {
-        "Email": "Sarah@Gmail.com",
-        "Name": "Sarah"
-    },
-    {
-        "Registered:": 5
-    },
-    {
-        "Checked In:": 2
+        "Checked In:": 0
     }
 ]
