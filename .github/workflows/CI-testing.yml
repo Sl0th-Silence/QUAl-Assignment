@@ -1,32 +1,23 @@
-#Name the workflow
 name: CI and Testing
 
-#Trigger to run workflow
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
-#job to run
 jobs:
-  #name of job
   build:
-    #the type of runner machine, virtual machine that will get built
     runs-on: ubuntu-latest
 
     steps:
-      #Step one checkout code from repo (download the repo on the runner)
       - uses: actions/checkout@v4
 
-      #Step two, setup python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-          cache: 'pip'
 
-      #Step 4, Run tests
       - name: Run tests
-        run:
-          python -m unittest main
+        run: python -m unittest main
+
